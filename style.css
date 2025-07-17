@@ -1,30 +1,54 @@
 html ,body{
     margin: 0;
     padding: 0;
+    font-family: 'Cairo', sans-serif;
     direction: rtl;
     height: 100%;
     width: 100%;
     background-image: url(src/Gate.jpg);
     background-repeat:no-repeat;
-    background-size: 80% 100%;
+    background-size: cover;
+    overflow: -moz-hidden-unscrollable;
+    
 }
 
-
-  
-div{
-    direction: rtl;
+#login-box {
     height: 100%;
-    width: max-content;
-    font-family: 'Cairo', sans-serif;
-    background-color: #ffeddd;
-    border-left: 4px solid #000;
+    border-left: 5px solid #0b703e;
     text-align: center;
+    position: fixed;        
+    top: 0;                 
+    right: 0;         
+    width: 500px;           
+    height: 100%;           
+    background-color: #f0d7aa;
+    font-size:large;
+    box-sizing: border-box;  
+    }
+
+section{
+    display: block;
+    margin-top: 80px;
 }
 
+form , label{
+    display: inline;
+    font-size: medium;
+}
+  
 footer {
-    font-size: smaller;
+    font-size:xx-small;
+    position:absolute;
+    bottom: 0;
+    right: 160px;
+    padding: 10px;
+    text-align: center;
 }
 
 a{
     text-decoration: none;
+    font-size: smaller;
+}
+input{
+    border-radius: 5px;
 }

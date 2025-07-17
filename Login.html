@@ -6,19 +6,22 @@
 
     </head>
     <body>
-        <div>
+        <div id="login-box" >
         <a href="http://www.bau.edu.jo/"><img src = "src/logo.png" alt="جامعة البقاء التطبيقية"></a>
-        <h1> بوابة الطالب - مركز الجامعة</h1>
+        <h3> كليات مركز الجامعة</h3>
+        <h2> <B> بوابة الطالب </B></h2>
         <form action="psot" name="" action="">
-           <label for="userName"> رقم الطالب  :</label> <input type="text" id="userName" name="userName" > <br>
-           <label for="password">  كلمة المرور :</label> <input type="password" id="password" name="password" > <br>
-            <a href="http://app3.bau.edu.jo:7777/stpass/getstpwd.jsp">هل نسيت كلمة المرور؟</a> <br>
+           <label for="userName"> رقم الطالب  : <input minlength="11" required type="text" id="userName" name="userName" ></label><br>
+           <label for="password">  كلمة المرور :<input required type="password" id="password" name="password" > <br> 
+           <a href="http://app3.bau.edu.jo:7777/stpass/getstpwd.jsp">هل نسيت كلمة المرور؟</a> <br>
             <input type="submit" value="دخول"> <br>
         </form>
+        <section>
         <a href="http://eval.bau.edu.jo/">موقع تقيم المدرسين</a> <br>
         <a href="https://www.bau.edu.jo/UserPortal/UserProfile/Login.aspx">بوابة البلقاء</a> <br>
+        </section>
         
-        <footer>©2024 جامعة البلقاء التطبيقية مركز الحاسوب </footer>
+        <footer>©2024 جامعة البلقاء التطبيقية</footer>
         </div>
     </body>
 </html>
