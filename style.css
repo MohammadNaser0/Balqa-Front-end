@@ -12,6 +12,18 @@ html ,body{
     
 }
 
+@media (max-width: 500px) {
+  #login-box {
+    border: none !important; 
+    width: 100% !important;
+  }
+  footer {
+    text-align: center !important;
+    right: 26vw !important;
+  }
+}
+
+
 #login-box {
     height: 100%;
     border-left: 5px solid #0b703e;
@@ -19,16 +31,17 @@ html ,body{
     position: fixed;        
     top: 0;                 
     right: 0;         
-    width: 500px;           
+    width: 100%;  
+    max-width: 450px;         
     height: 100%;           
-    background-color: #f0d7aa;
+    background-color: #fef6d1;
     font-size:large;
     box-sizing: border-box;  
     }
 
 section{
     display: block;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 form , label{
@@ -40,7 +53,7 @@ footer {
     font-size:xx-small;
     position:absolute;
     bottom: 0;
-    right: 160px;
+    right: 14.5vh;
     padding: 10px;
     text-align: center;
 }
@@ -51,4 +64,14 @@ a{
 }
 input{
     border-radius: 5px;
+}
+img{
+    width:100%;
+}
+#submit{
+    font-size: medium;
+    font-family: 'Cairo', sans-serif;
+    width: 100px;
+    height: 50px;
+    margin-top: 40px;
 }
