@@ -15,7 +15,7 @@ html ,body{
 
 #login-box {
     height: 100%;
-    border-left: 5px solid #0b703e;
+    border-left: 5px solid #28a745;
     text-align: center;
     position: fixed;        
     top: 0;                 
@@ -23,7 +23,7 @@ html ,body{
     width: 100%;  
     max-width: 450px;         
     height: 100%;           
-    background-color: #fef6d1;
+    background-color: #ffffff;
     font-size:large;
     box-sizing: border-box; 
     }

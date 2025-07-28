@@ -6,7 +6,7 @@
 
         <title>بوابة الطالب</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login-style.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
 
     </head>
@@ -18,8 +18,8 @@
             <h2><B> بوابة الطالب </B></h2>
 
                <form action="psot" name="" action="">
-                    <label for="userName"> رقم الطالب  : <input minlength="11" required type="text" id="userName" name="userName" ></label><br>
-                    <label for="password">كلمة المرور :<input required type="password" id="password" name="password" > <br> 
+                    <label for="userName"> رقم الطالب  : <input minlength="11" pattern="[0-9]" required type="text" id="userName" name="userName" ></label><br>
+                    <label for="password">كلمة المرور : <input required type="password" id="password" name="password" > <br> 
                     <a href="http://app3.bau.edu.jo:7777/stpass/getstpwd.jsp">هل نسيت كلمة المرور؟</a> <br>
                     <input id="submit" type="submit" value="دخول"> <br>
                 </form>
