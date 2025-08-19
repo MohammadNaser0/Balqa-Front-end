@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="ar">
     <head>
-    <title>بوابة الطالب</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+
+        <title>تسجيل الدخول</title>
+
+        <link rel="stylesheet" href="Login-style.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+
     </head>
     <body>
-        <a href="http://www.bau.edu.jo/"><img src = "src/logo.png" alt="جامعة البقاء التطبيقية"></a>
+        <div id="login-box" >
+            
+            <a id="logo" href="http://www.bau.edu.jo/"><img  src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
+            <h3> كليات مركز الجامعة</h3>
+            <h2><B> بوابة الطالب </B></h2>
+
+               <form action="psot" name="" action="reg_new/actions/login">
+                    <label for="userName"> رقم الطالب  : <input minlength="11" pattern="[0-9]" required type="text" id="userName" name="userName" ></label><br>
+                    <label for="password">كلمة المرور : <input required type="password" id="password" name="password" > <br> 
+                    <a href="http://app3.bau.edu.jo:7777/stpass/getstpwd.jsp">هل نسيت كلمة المرور؟</a> <br>
+                    <input id="submit" type="submit" value="دخول"> <br>
+                </form>
+
+                <section>
+                    <a href="http://eval.bau.edu.jo/">موقع تقيم المدرسين</a> <br>
+                    <a href="https://www.bau.edu.jo/UserPortal/UserProfile/Login.aspx">بوابة البلقاء</a> <br>
+                </section>
+
+              <footer>© 2024 جامعة البلقاء التطبيقية</footer>
+           </div>
     </body>
 </html>
