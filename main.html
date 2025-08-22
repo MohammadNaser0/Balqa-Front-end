@@ -4,12 +4,22 @@
     <title>بوابة الطالب</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index-style.css">
+        <link rel="stylesheet" href="main-style.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
+   <script>
+    function showSection() {
+      let hash = location.hash || "#home";
+      const target = document.querySelector(hash);
+      document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
+      if (target) target.style.display = "block";
+    }
+    window.addEventListener("hashchange", showSection);
+    window.addEventListener("load", showSection);
+    </script>
         <aside>
-            <a href="http://www.bau.edu.jo/"><img src = "src/logo.png" alt="جامعة البقاء التطبيقية"></a>
+            <a href="http://www.bau.edu.jo/"><img href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
                 <li><a href="#home">الصفحة الرئيسية</a></li>
                 <li><a href="#registration">تسجيل المواد</a></li>
@@ -19,11 +29,11 @@
             </ul>
         </aside>
          <main>
-            <section id="home"></section>
-            <section id="registration"></section>
-            <section id="grades"></section>
-            <section id="services"></section>
-            <section id="finance"></section>
+            <section id="home">this is home</section>
+            <section id="registration"> this is registration</section>
+            <section id="finance">this is finance</section>
+            <section id="grades">this is grades </section>
+            <section id="services">those are services</section>
         </main>
     </body>
 </html>

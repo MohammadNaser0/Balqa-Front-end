@@ -51,11 +51,11 @@ img{
     }
 
 footer {
+    width:100%;
+    display: block;
     font-size:xx-small;
     position:absolute;
     bottom: 0;
-    right: 11.5vh;
-    padding: 10px;
     text-align: center;
     }
 
@@ -63,10 +63,6 @@ footer {
   #login-box {
     border: none !important; 
     width: 100% !important;
-        }
-  footer {
-    text-align: center !important;
-    right: 26vw !important;
         }
     }
     @media (prefers-color-scheme: dark){
