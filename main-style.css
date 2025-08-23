@@ -5,25 +5,51 @@ html ,body{
     direction: rtl;
     height: 100%;
     width: 100%;
+    background: #ecf0f1;
     overflow: -moz-hidden-unscrollable;
     display: flex;
 }
 aside{
-    width: 250px; 
-    padding: 1rem;
-    text-align: center;
+  background: #2e7d32; 
+  width: 250px;
+  height: 100vh;
+  padding: 20px; 
+  color: #fff;
+}
 
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 20px;
 }
+th, td {
+    width: 300px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 16px 0;  
+}
+
 main {
-      flex: 1;              
-      background: #ecf0f1;  
-      padding: 1rem;
-      overflow-y: auto;     
+    margin: 20px;
+    flex: 1;               
+    padding: 1rem;
+    overflow-y:auto;   
 }
-    img{
-    width:50%;
+#logo {
+    width: 10em;
+    display: block;
+    margin: auto;
 }
 a{
     color: inherit;
     text-decoration: none;
+}
+
+.service{
+
 }

@@ -8,32 +8,65 @@
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
-   <script>
-    function showSection() {
-      let hash = location.hash || "#home";
-      const target = document.querySelector(hash);
-      document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
-      if (target) target.style.display = "block";
-    }
-    window.addEventListener("hashchange", showSection);
-    window.addEventListener("load", showSection);
-    </script>
-        <aside>
-            <a href="http://www.bau.edu.jo/"><img href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
+        <script>
+         function showSection() {
+           let hash = location.hash || "#home";
+           const target = document.querySelector(hash);
+           document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
+           if (target) target.style.display = "block";
+         }
+         window.addEventListener("hashchange", showSection);
+         window.addEventListener("load", showSection);
+         </script>
+        <aside id="sideBar">
+            <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
-                <li><a href="#home">الصفحة الرئيسية</a></li>
+                <li><a href="#home"> الصفحة الرئيسية</a></li>
                 <li><a href="#registration">تسجيل المواد</a></li>
                 <li><a href="#finance">المالية</a></li>
                 <li><a href="#grades">العلامات والإمتحانات</a></li>
                 <li><a href="#services">خدمات الأكاديمية</a></li>
+                <li><a href="#services">تسجيل الخروج</a></li>
             </ul>
         </aside>
          <main>
             <section id="home">this is home</section>
-            <section id="registration"> this is registration</section>
-            <section id="finance">this is finance</section>
-            <section id="grades">this is grades </section>
-            <section id="services">those are services</section>
+            <section id="registration"> this is registration
+                <div><button></button><button></button></div>
+                <div><button></button><button></button></div>
+            </section>
+            <section id="finance"> 
+                    <p id="sponsor">الجهة المانحة: نفقة خاصة</p>
+                    <p id="StudyType">نوع الدراسة: موازي</p> 
+                    <p id="creditPrice">سعر الساعة: 45</p> 
+                    <p id="regPrice">رسوم التسجيل: 55</p>
+                    <form >
+                        <div style="display: flex;">
+                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21" style="margin-left: 50px; ;"></label> <label for="total"> المبلغ المطلوب:<input type="text" readonly id="total"></label>
+                        </div>
+                        <button type="button"><p>حساب الرسوم</p></button>
+                    </form>
+                    <hr>
+                    <a service style="text-decoration: underline;">الوصلات المالية</a>
+                    
+            </section>
+            <section id="grades">
+                <table >
+                    <tr style="background-color:#2d9a32; color: #ffffff;">
+                        <th>اسم المادة</th>
+                        <th>موعد الإمتحان</th>
+                        <th>قاعات الإمتحانات</th>
+                    </tr>
+                </table>
+                <hr>
+                <div><a class="service" href="">أعتراض على مادة</a>     <a class="service" href="">تقديم عذر</a></div>
+                <div><a class="service" href=""> كشف العلامات</a>     <a class="service" href="">علامات الفصل  </a></div>
+                 </section>
+            <section id="services">
+                <div><button></button><button></button><button></button></div>
+                <div><button></button><button></button><button></button></div>
+            </section>
+            
         </main>
     </body>
 </html>
