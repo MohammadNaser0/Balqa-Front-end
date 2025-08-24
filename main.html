@@ -27,27 +27,28 @@
         <aside id="sideBar">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
-                <li><a href="#home"> الصفحة الرئيسية</a></li>
-                <li><a href="#registration">تسجيل المواد</a></li>
-                <li><a href="#finance">المالية</a></li>
-                <li><a href="#grades">العلامات والإمتحانات</a></li>
-                <li><a href="#services">خدمات الأكاديمية</a></li>
-                <li><a href="#services">تسجيل الخروج</a></li>
+                <li><h4><a href="#home"> الصفحة الرئيسية</a></h4></li>
+                <li><h4><a href="#registration">تسجيل المواد</a></h4></li>
+                <li><h4><a href="#finance">المالية</a></h4></li>
+                <li><h4><a href="#grades">العلامات والإمتحانات</a></h4></li>
+                <li><h4><a href="#services">خدمات الأكاديمية</a></h4></li>
+                <li><h4><a href="#services">تسجيل الخروج</a></h4></li>
             </ul>
         </aside>
          <main>
             <section id="home">this is home</section>
-            <section id="registration"> this is registration
+            <section id="registration"> <h1>تسجيل المواد</h1>
                 <div><button>الخطة الدراسية</button><button>جريدة المواد</button></div>
                 <div><button>تأجيل الفصل</button><button>جريدة المواد</button></div>
             </section>
-            <section id="finance"> 
+            <section id="finance">
+                    <h1>المالية</h1> 
                     <p id="sponsor">الجهة المانحة: نفقة خاصة</p>
                     <p id="StudyType">نوع الدراسة: موازي</p> 
                     <p id="creditPrice">سعر الساعة: 45</p> 
                     <p id="regPrice">رسوم التسجيل: 55</p>
                     <form >
-                        <div style="display: flex;">
+                        <div style="display: inline;">
                         <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21" style="margin-left: 50px; ;"></label> <label for="total"> المبلغ المطلوب:<input type="text" readonly id="total"></label>
                         </div>
                         <button type="button"><p>حساب الرسوم</p></button>
@@ -58,6 +59,7 @@
             </section>
             <section id="grades">
                 <table >
+                    <h1>العلامات والإمتحانات</h1>
                     <tr style="background-color:#2d9a32; color: #ffffff;">
                         <th>اسم المادة</th>
                         <th>موعد الإمتحان</th>
@@ -65,10 +67,11 @@
                     </tr>
                 </table>
                 <hr>
-                <div><a class="service" href="">أعتراض على مادة</a>     <a class="service" href="">تقديم عذر</a></div>
-                <div><a class="service" href=""> كشف العلامات</a>     <a class="service" href="">علامات الفصل  </a></div>
+                <div><button>أعتراض على مادة</button>     <button>تقديم عذر</button></div>
+                <div><button> كشف العلامات</button>     <button>علامات الفصل  </button></div>
                  </section>
             <section id="services">
+                <h1>خدمات الأكاديمية</h1>
                 <div><button>برائة ذمة</button><button>معادلة المواد</button><button>طلب تحويل</button></div>
                 <div><button>العقوبات التأديبية</button><button>البطاقة الذكية</button><button>الإنقطاع عن الدراسة</button></div>
             </section>
