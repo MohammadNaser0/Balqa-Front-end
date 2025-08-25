@@ -23,6 +23,9 @@ html ,body{
     font-size:medium;
     box-sizing: border-box; 
     }
+    h1 ,h2{
+        margin-top: 0px;
+    }
 section{
     display: block;
     margin-top: 30px;

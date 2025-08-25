@@ -27,7 +27,7 @@ main {
 table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 20px;
 }
 th,td{
