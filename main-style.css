@@ -27,11 +27,13 @@ main {
 table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
+  max-width: 800px;
   padding: 20px;
 }
-th, td {
-    width: 300px;
+th,td{
+    width: fit-content;
 }
+
 ul{
     list-style: none;
 }
