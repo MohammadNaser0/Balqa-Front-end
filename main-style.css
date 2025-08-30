@@ -5,17 +5,17 @@ html ,body{
     direction: rtl;
     height: 100%;
     width: 100%;
-    background: #ecf0f1;
+    background: #f0f0f0;
     overflow: -moz-hidden-unscrollable;
     display: flex;
 }
 aside{
   background: #2e7d32; 
-  width: 250px;
+  width: 300px;
   height: 100vh;
   padding: 20px; 
   color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 main {
     margin: 20px;
@@ -49,5 +49,49 @@ a{
     color: inherit;
     text-decoration: none;
 }
-.service{
+.icon {
+   display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill:currentColor;
 }
+div{
+  display: block;
+}
+button, a.btn-link {
+  font-family: inherit;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  max-width: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  background-color: #2e7d32;
+  color: #f0f0f0;
+  margin: 10px;
+  text-decoration: none; 
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  #mobile{
+    text-align: center;
+  }
+}
+@media (prefers-color-scheme: dark){
+        body {
+            color: #f0f0f0;
+            background-color:#181818;
+        }
+        input:not([type="button"]){
+          color: #f0f0f0;
+          background-color: #181818;
+          border: none;
+        }
+    }
