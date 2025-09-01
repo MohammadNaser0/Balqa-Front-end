@@ -23,7 +23,7 @@
          }
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
-         </script>
+        </script>
         <aside id="sideBar">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
@@ -48,29 +48,20 @@
             </ul>
         </aside>
          <main>
+            <span onclick="openNav()"></span>
             <section id="home">
                 <h2>الصفحة الرئيسية</h2>
                     <div id="idCard" style="text-align: center;">
-                        <img src="src/2025-08-26 20_40_53-.png" alt="صورة طالب">
+                        <img id="id" src="src/2025-08-26 20_40_53-.png" alt="صورة طالب">
+                        <div>
                         <p id="studnetName">أسم الطالب:أبو محمد الفولاني</p>
                         <p id="studentspec">تخصص الطالب: فلول جميلة</p>
                         <p id="studentNum">رقم الطالب: 3200000000</p>
+                        </div>
                     </div><hr>
-                    <div><button>بيانات الحساب</button><button>دليل الطالب</button><button>التقويم الجامعي</button><button>التعليم الإلكتروني</button><button>تقديم عذر</button><a href="otherpage.html" class="btn-link">Go to Other Page</a></div>
-
+                    <div><button>بيانات الحساب</button><button>دليل الطالب</button><button>التقويم الجامعي</button><button>التعليم الإلكتروني</button><button>تقديم عذر</button></div>
             </section>
             <section id="registration"> <h2>تسجيل المواد</h2>
-                <table> 
-                    <tr style="background-color:#2d9a32; color: #ffffff;">
-                            <th>رقم المادة</th>
-                            <th>اسم المادة</th>
-                            <th>الشعبة</th>
-                            <th>الأيام</th>
-                            <th>المدرس</th>
-                            <th>وقت المحاضرة</th>
-                            <th>مكان القاعة</th>
-                    </tr>
-                </table>
                     <hr>
                 <div><button>الخطة الدراسية</button><button>تسجيل المواد</button></div>
                 <div><button>تأجيل الفصل</button><button>جريدة المواد</button></div>
@@ -82,22 +73,14 @@
                     <p id="creditPrice">سعر الساعة: 45</p> 
                     <p id="regPrice">رسوم التسجيل: 55</p>
                     <form >
-                        <div style="display: inline;">
-                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21" style="margin-left: 50px; ;"><p id="total" style="margin: 0px;">المبلغ المطلوب: </p>
-                        <button style="margin-top: 30px;">حساب الرسوم</button>
+                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21"></label><p id="total">المبلغ المطلوب: </p>
+                        <button>حساب الرسوم</button>
                     </form>
                     <hr>
                     <a class="btn-link" href="">الوصلات المالية</a>
             </section>
             <section id="grades">
-                <table >
-                    <h2>الإمتحانات</h2>
-                    <tr style="background-color:#2d9a32; color: #ffffff;">
-                        <th>اسم المادة</th>
-                        <th>موعد الإمتحان</th>
-                        <th>قاعات الإمتحانات</th>
-                    </tr>
-                </table>
+                <h2>الإمتحانات</h2>
                 <hr>
                 <div><button>أعتراض على مادة</button>     <button>العلامات النهائية</button></div>
                 <div><button> كشف العلامات</button>     <button>العلامات الفصلية  </button></div>
@@ -107,7 +90,6 @@
                 <div><button>برائة ذمة</button><button>معادلة المواد</button><button>طلب تحويل</button><button>تغيير كلمة السر</button></div>
                 <div><button>العقوبات التأديبية</button><button>البطاقة الذكية</button><button>الإنقطاع عن الدراسة</button></div>
             </section>
-            
         </main>
-    </body>
+    </body> 
 </html>

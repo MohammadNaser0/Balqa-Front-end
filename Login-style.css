@@ -25,6 +25,8 @@ html ,body{
     }
     h1 ,h2{
         margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
 section{
     display: block;
@@ -62,19 +64,16 @@ footer {
     margin-right: auto;
     position: absolute;
     }
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: white; /* or any color */
-  margin-right: 8px;
-  vertical-align: middle;
-}
 @media (max-width: 450px) {
     html ,body{
+        align-items: center;
+        text-align: center;
         background-image: none;
     }
-    #mobile{
+    #login-box{
+        width: 100%;
         text-align: center;
+        border: none;
     }
     }
     @media (prefers-color-scheme: dark){
