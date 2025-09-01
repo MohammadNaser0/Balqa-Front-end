@@ -66,8 +66,6 @@ footer {
     }
 @media (max-width: 450px) {
     html ,body{
-        align-items: center;
-        text-align: center;
         background-image: none;
     }
     #login-box{
