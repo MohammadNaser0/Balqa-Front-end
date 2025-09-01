@@ -23,10 +23,16 @@
          }
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
+
+         function openNav(){
+            const aside = document.querySelector("aside");
+            aside.classList.toggle("open")
+         }
         </script>
         <aside id="sideBar">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
+                <li><span onclick="openNav()" style="z-index: 10000000; text-align: left; direction:unset;">X إغلاق</span></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-home"></use></svg>
                     <a href="#home"> الصفحة الرئيسية</a></h4></li>
@@ -48,7 +54,7 @@
             </ul>
         </aside>
          <main>
-            <span onclick="openNav()"></span>
+            <span onclick="openNav()" style="z-index: 10000000; text-align: left; direction:unset;">☰</span>
             <section id="home">
                 <h2>الصفحة الرئيسية</h2>
                     <div id="idCard" style="text-align: center;">

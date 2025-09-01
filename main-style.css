@@ -19,6 +19,11 @@ aside{
   position: fixed;
   top: 0;
   right: 0;
+   transform: translateX(0%); 
+  transition: transform 0.3s ease;  
+}
+aside.open{
+  transform: translateX(0%);
 }
 main {
     margin: 20px;
@@ -85,13 +90,12 @@ button, a.btn-link {
 }
 @media (max-width: 450px) {
   aside {
-    right: -340px;
+    transform: translateX(100%); 
   }
   main {
     margin: 0;
-    text-align: center;
   }
-  div{
+  section{
     text-align: center;
   }
   #idCard{
