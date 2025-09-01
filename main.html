@@ -14,7 +14,7 @@
         <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v30/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5a1biLD-H.woff2" as="fon/woff2" crossorigin="anonymous">
     </head>
     <body>
-        <script>
+        <script defer>
          function showSection() {
            let hash = location.hash || "#home";
            const target = document.querySelector(hash);
@@ -28,6 +28,13 @@
             const aside = document.querySelector("aside");
             aside.classList.toggle("open")
          }
+         const drawer = document.querySelector("aside");
+
+drawer.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    drawer.classList.remove("open"); // closes the drawer
+  });
+});
         </script>
         <aside id="sideBar">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
