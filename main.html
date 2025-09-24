@@ -6,12 +6,14 @@
     <title>بوابة الطالب</title>
         <link rel="preconnect" href="fonts.gstatic.com" />
         <link rel="stylesheet" href="main-style.css">
-        <link rel="preload" href="main-style.css" as="style">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" >
         <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v30/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5a1PiLA.woff2" as="fon/woff2" crossorigin="anonymous">
         <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v30/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5a1biLD-H.woff2" as="fon/woff2" crossorigin="anonymous">
     </head>
-    <body>
+    <body>|
+    <!-- add fuction to GET the data
+        student's name, number, degree, credit hour, phone number,and E-Learning info
+    -->
         <script>
          function showSection() {
            let hash = location.hash || "#home";
@@ -22,7 +24,7 @@
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
 
-         function openNav(){
+         function toggleNav(){
             const aside = document.querySelector("aside");
             aside.classList.toggle("open")
          
@@ -56,33 +58,33 @@
             </ul>
         </aside>
          <main>
-            <span onclick="openNav()" style="z-index: 10000000; text-align: left; direction:unset; font-size: x-large;">☰</span>
+            <span onclick="toggleNav()" style="z-index: 10000000; text-align: left; direction:unset; font-size: x-large;">☰</span>
             <section id="home">
                 <h2>الصفحة الرئيسية</h2>
-                    <div id="idCard" style="text-align: center;">
+                    <div id="idCard">
                         <img id="id" src="src/2025-08-26 20_40_53-.png" alt="صورة طالب">
-                        <div>
+                        <div style="padding: 20px;">
                         <p id="studnetName">الإسم: أبو محمد الفولاني</p>
                         <p id="studentspec">التخصص: فلول جميلة</p>
                         <p id="studentNum">الرقم الجامعي: 3200000000</p>
+                        <p id="state">الحالة الدراسية: على مقاعد الدراسة</p>
                         </div>
                     </div><hr>
-                    <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button>بيانات الحساب</button></div>
+                    <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onc>بيانات الحساب</button><button onclick="">طلب البطاقة الذكية</button></div>
             </section>
             <section id="registration"> <h2>تسجيل المواد</h2>
                     <hr>
-                <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a></div>
-                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="SP/plan.html" class="btn-link">الخطة الدراسية</a></div>
+                <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
+                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="SP/plan.html" class="btn-link">الخطة الدراسية</a><button onclick="">تأجيل الفصل</button></div>
             </section>
             <section id="finance">
                     <h2>المالية</h2> 
                     <p id="sponsor">الجهة المانحة: نفقة خاصة</p>
-                    <p id="StudyType">نوع الدراسة: موازي</p> 
-                    <p id="creditPrice">سعر الساعة: 45</p> 
-                    <p id="regPrice">رسوم التسجيل: 55</p>
+                    <p id="creditPrice">سعر الساعة: </p> 
+                    <p id="regPrice">رسوم التسجيل: </p>
                     <form >
-                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21"></label><p id="total">المبلغ المطلوب: </p>
-                        <button>حساب الرسوم</button>
+                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21" value="12"></label><p id="total">المبلغ المطلوب: </p>
+                        <button onclick="">حساب الرسوم</button>
                     </form>
                     <hr>
                     <a class="btn-link" href="SP/Receipts.html">الوصلات المالية</a>
@@ -90,14 +92,15 @@
             <section id="grades">
                 <h2>الإمتحانات</h2>
                 <hr>
-                <div><a href="SP/exams.html" class="btn-link">جدول الإمتحانات</a><a href="SP/semester.html" class="btn-link">العلامات الفصلية</a></div>
-                <div><a href="SP/marksheet.html" class="btn-link">كشف العلامات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a></div>
+                <div><a href="SP/exams.html" class="btn-link">جدول الإمتحانات</a><a href="SP/semester.html" class="btn-link">علامات الفصل</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a></div>
+                <div><a href="SP/marksheet.html" class="btn-link">كشف العلامات</a><button onclick="">إسقاط المادة</button><button onclick="">أعتراض على مادة</button></div>
                  </section>
             <section id="services">
                 <h2>خدمات الأكاديمية</h2><hr>
-                <div><button>البطاقة الذكية</button><button>تغيير كلمة السر</button><button>أعتراض على مادة</button><button>معادلة المواد</button><button>إسقاط المادة</button></div>
-                <div><button>طلب تحويل</button><button>إسقاط الفصل</button><button>تأجيل الفصل</button><button>براءة ذمة</button><button>الإنقطاع عن الدراسة</button></div>
+                <div><button onclick="">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="">الإنقطاع عن الدراسة</button></div>
+                <div><button onclick="">طلب تحويل</button><button onclick="">إسقاط الفصل</button></div>
             </section>
         </main>
+        <script src="JS/services.js"></script>
     </body> 
 </html>

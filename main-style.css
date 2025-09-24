@@ -82,13 +82,14 @@ button, a.btn-link {
 }
 #idCard{
   display: flex;
+  text-align:right;
 }
 #id{
-  border: #2e7d32 3px solid;
+  border: #2e7d32 7px solid;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  text-align: center;
+  align-self: center;
 }
 @media (max-width: 450px) {
   aside {
@@ -103,6 +104,7 @@ button, a.btn-link {
   }
   #idCard{
     flex-direction: column;
+    text-align: center;
     align-items: center;
   }
   span{
