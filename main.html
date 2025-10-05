@@ -24,7 +24,6 @@
          function toggleNav(){
             const aside = document.querySelector("aside");
             aside.classList.toggle("open")
-         
             aside.querySelectorAll("a").forEach(link => {
                 link.addEventListener("click", () => {
                 aside.classList.remove("open")});
@@ -37,6 +36,9 @@
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-home"></use></svg>
                     <a href="#home"> الصفحة الرئيسية</a></h4></li>
+                <li><h4>
+                    <svg class="icon"><use href="src/icons.svg#icon-bell"></use></svg>
+                    <a href="#announcement">الإعلانات</a></li></h4>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-reg"></use></svg>
                     <a href="#registration">تسجيل المواد</a></h4></li>
@@ -69,12 +71,15 @@
                     </div><hr>
                     <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onc>بيانات الحساب</button><button onclick="">طلب البطاقة الذكية</button></div>
             </section>
-            <section id="registration"> <h2>تسجيل المواد</h2>
+             <section id="announcement">
+                <h2>الإعلانات</h2><hr>
+            </section>
+            <section id="registration" style="display: none;"> <h2>تسجيل المواد</h2>
                     <hr>
                 <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
                 <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="SP/plan.html" class="btn-link">الخطة الدراسية</a><button onclick="">تأجيل الفصل</button></div>
             </section>
-            <section id="finance">
+            <section id="finance" style="display: none;">
                     <h2>المالية</h2> 
                     <p id="sponsor">الجهة المانحة: نفقة خاصة</p>
                     <p id="debt"></p>
@@ -87,13 +92,13 @@
                     <hr>
                     <a class="btn-link" href="SP/Receipts.html">الوصلات المالية</a>
             </section>
-            <section id="grades">
+            <section id="grades" style="display: none;">
                 <h2>الإمتحانات</h2>
                 <hr>
                 <div><a href="SP/exams.html" class="btn-link">جدول الإمتحانات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a></div>
                 <div><a href="SP/marksheet.html" class="btn-link">كشف العلامات</a><button onclick="">أعتراض على مادة</button></div>
                  </section>
-            <section id="services">
+            <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
                 <div><button onclick="">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="">الإنقطاع عن الدراسة</button></div>
                 <div><button onclick="">طلب تحويل</button><button onclick="">إسقاط الفصل</button><button onclick="">إسقاط المادة</button></div>
