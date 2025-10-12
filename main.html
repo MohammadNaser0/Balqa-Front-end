@@ -29,6 +29,28 @@
                 aside.classList.remove("open")});
             })
             };
+            function loadData(){
+                fetch('Test.json')
+                .then(response => response.json())
+                .then(data => {
+
+                  const id = data.id;
+                  finance = data.finance;
+
+                  document.getElementById('studnetName').textContent += id.studnetName;
+                  document.getElementById('studentMajor').textContent += id.studentMajor;
+                  document.getElementById('studentNum').textContent += id.studentNum;
+                  document.getElementById('studentState').textContent += id.studentState;
+                  document.getElementById("idPicture").src = id.idPicture;
+
+                   document.getElementById('sponsor').textContent += finance.sponsor;
+                  document.getElementById('debt').textContent += finance.debt;
+                  document.getElementById('creditPrice').textContent += finance.creditPrice;
+                   document.getElementById('regPrice').textContent += finance.regPrice;
+                   }).catch(err => console.error('Error loading JSON:', err));   
+                }
+                      
+                       window.onload = loadData;
         </script>
         <aside id="sideBar">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
@@ -44,7 +66,7 @@
                     <a href="#registration">تسجيل المواد</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-finance"></use></svg>
-                    <a href="#finance">المالية</a></h4></li>
+                    <a href="#Finance">المالية</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-grades"></use></svg> 
                     <a href="#grades">الإمتحانات</a></h4></li>
@@ -57,37 +79,38 @@
             </ul>
         </aside>
          <main>
-            <span onclick="toggleNav()" style="z-index: 10000000; text-align: left; direction:unset; font-size: x-large;">☰</span>
+            <span onclick="toggleNav()" style="z-index: 10000; text-align: left; direction:unset; font-size: x-large;">☰</span> <!-- add pop up elements with data entry and submission list: البطاقة الذكية ,عرض بيانت الحساب ,-->
             <section id="home">
                 <h2>الصفحة الرئيسية</h2>
                     <div id="idCard">
-                        <img id="id" src="src/2025-08-26 20_40_53-.png" alt="صورة طالب">
+                        <img id="idPicture" src="" alt="صورة طالب">
                         <div style="padding: 20px;">
-                        <p id="studnetName">الإسم:  محمد الفولاني</p>
-                        <p id="studentspec">التخصص: أدب إنجليزي</p>
-                        <p id="studentNum">الرقم الجامعي: 3200000000</p>
-                        <p id="state">الحالة الدراسية: على مقاعد الدراسة</p>
+                        <p id="studnetName">الإسم: </p>
+                        <p id="studentMajor">التخصص: </p>
+                        <p id="studentNum">الرقم الجامعي: </p>
+                        <p id="studentState">الحالة الدراسية: </p>
                         </div>
-                    </div><hr>
-                    <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onc>بيانات الحساب</button><button onclick="">طلب البطاقة الذكية</button></div>
+                    </div><hr> 
+                    <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onclick="showEmailInfo()">بيانات الحساب</button><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><a href="" class="btn-link">أعذار الطالب</a></div>
             </section>
-             <section id="announcement">
+             <section id="announcement"style="display: none;">
                 <h2>الإعلانات</h2><hr>
+                <div id="announcements"></div>
             </section>
             <section id="registration" style="display: none;"> <h2>تسجيل المواد</h2>
                     <hr>
-                <div><a href="SP/Lectures.html" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
-                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="SP/plan.html" class="btn-link">الخطة الدراسية</a><button onclick="">تأجيل الفصل</button></div>
+                <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
+                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="SP/plan.html" class="btn-link">الخطة الدراسية</a><button onclick="delaySemester()">تأجيل الفصل</button></div>
             </section>
-            <section id="finance" style="display: none;">
+            <section id="Finance" style="display: none;">
                     <h2>المالية</h2> 
-                    <p id="sponsor">الجهة المانحة: نفقة خاصة</p>
-                    <p id="debt"></p>
+                    <p id="sponsor">الجهة المانحة: </p>
+                    <p id="debt">ذمم:</p>
                     <p id="creditPrice">سعر الساعة: </p> 
                     <p id="regPrice">رسوم التسجيل: </p>
-                    <form >
-                        <label for="numOfCredit">عدد الساعات:<input id="numOfCredit" required type="number" min="12" max="21" value="12"></label><p id="total">المبلغ المطلوب: </p>
-                        <button onclick="">حساب الرسوم</button>
+                    <form id="calc">
+                        <label for="numOfCredits">عدد الساعات:<input id="numOfCredits" required type="number" min="12" max="21" value="12"></label><p id="total" >المبلغ المطلوب: </p>
+                        <button id="calculate" onclick="CalculateTotal()">حساب الرسوم</button>
                     </form>
                     <hr>
                     <a class="btn-link" href="SP/Receipts.html">الوصلات المالية</a>
@@ -95,15 +118,25 @@
             <section id="grades" style="display: none;">
                 <h2>الإمتحانات</h2>
                 <hr>
-                <div><a href="SP/exams.html" class="btn-link">جدول الإمتحانات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a></div>
-                <div><a href="SP/marksheet.html" class="btn-link">كشف العلامات</a><button onclick="">أعتراض على مادة</button></div>
+                <div><a href="SP/dates.html#examDate" class="btn-link">جدول الإمتحانات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a><a href="SP/marksheet.html" class="btn-link">كشف علامات</a></div>
+                <div><a href="SP/dates.html#examScore" class="btn-link">كشف علامات الفصل</a><button onclick="markObjection()">أعتراض على مادة</button></div>
                  </section>
             <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
-                <div><button onclick="">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="">الإنقطاع عن الدراسة</button></div>
-                <div><button onclick="">طلب تحويل</button><button onclick="">إسقاط الفصل</button><button onclick="">إسقاط المادة</button></div>
+                <div><button onclick="changePassowrd()">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="dropOut()">الإنقطاع عن الدراسة</button></div>
+                <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><button onclick="dropClass()">إسقاط المادة</button></div>
             </section>
         </main>
-        <script src="JS/services.js"></script>
+        <script>
+             function CalculateTotal() {
+            const finance = window.finance;
+
+            const credit = parseFloat(document.getElementById('numOfCredits').value) || 0;
+            let total = finance.debt + (finance.creditPrice * credit) + finance.regPrice;
+            
+            document.getElementById('total').textContent ="المبلغ المطلوب: "+ total; // Use the correct ID for an element.
+
+        }
+        </script>
     </body> 
 </html>

@@ -30,7 +30,7 @@ main {
     padding: 1rem;
     overflow-y:auto;
     z-index: 0;  
-    margin-right: 340px; 
+    margin-right: 300px; 
 }
 ul{
     list-style: none;
@@ -41,7 +41,7 @@ li{
 #logo {
     width: 10em;
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
 span{
   display: none;
@@ -84,7 +84,7 @@ button, a.btn-link {
   display: flex;
   text-align:right;
 }
-#id{
+#idPicture{
   border: #2e7d32 7px solid;
   border-radius: 50%;
   width: 200px;
