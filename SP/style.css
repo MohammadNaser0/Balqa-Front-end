@@ -31,6 +31,6 @@ tbody{
 }
 @media (max-width: 450px) {
     td ,tr ,th{
-        font-size: 10px;
+        font-size: 9px;
     }
   }
