@@ -8,7 +8,7 @@
     },
     "finance":{
         "sponsor":"مديرية الثقافة العسكرية",
-        "debt": 100,
+        "debt":-100,
         "creditPrice": 50,
         "regPrice": 55
     }

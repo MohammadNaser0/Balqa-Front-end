@@ -7,6 +7,15 @@
     <title>مواعيد</title>
 </head>
 <body>
+    <script>function showSection() {
+           let hash = location.hash || "exa";
+           const target = document.querySelector(hash);
+           document.querySelectorAll("body table").forEach(sec => sec.style.display = "none");
+           if (target) target.style.display = "block";
+         }
+         window.addEventListener("hashchange", showSection);
+         window.addEventListener("load", showSection);
+</script>
         <table id="examDate">
                 <tr>
                     <th id="courseName">أسم المادة</th>
@@ -17,8 +26,8 @@
         </table>
          <table id="schedule">
                 <tr>
-                    <th id="courseID">رقم المادة</th>
-                    <th id="courseName">أسم المادة</th>
+                    <th id="courseID" style="width: 10%;">رقم المادة</th>
+                    <th id="courseName" style="width: 15%;">أسم المادة</th>
                     <th id="courseCredit">عدد الساعات</th>
                     <th id="courseClass">رقم الشعبة</th>
                     <th id="courseTime">وقت المحاضرة</th>
