@@ -12,8 +12,8 @@ html ,body{
 td ,tr ,th{
     text-align: center;
     border: #000 2px solid;
-    line-height: 13px;
-    font-size: 14px;
+    line-height: 15px;
+    font-size: 12px;
     
 }
 table ,tbody{
@@ -29,8 +29,22 @@ tbody{
     margin: 0;
     width: 100%;
 }
+th{
+    background-color: #37a13c;
+    color: #f0f0f0;
+}
 @media (max-width: 450px) {
     td ,tr ,th{
         font-size: 9px;
     }
   }
+@media (prefers-color-scheme: dark){
+       html, body {
+            color: #f0f0f0;
+            background-color:#181818;
+        }
+        table,tbody,td ,tr ,th{
+            border-color: #696969;
+        }
+    }
+  
