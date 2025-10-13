@@ -9,7 +9,6 @@ html ,body{
     background-image: url("src/Gate.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    overflow: hidden;
     }
 #login-box {
     height: 100%;
