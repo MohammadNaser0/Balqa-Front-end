@@ -68,6 +68,9 @@ footer {
     html ,body{
         background-image: none;
     }
+    img{
+    margin-top: 15px;
+    }
     #login-box{
         width: 100%;
         text-align: center;
