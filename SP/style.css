@@ -12,8 +12,8 @@ html ,body{
 td ,tr ,th{
     text-align: center;
     border: #000 2px solid;
-    line-height: 15px;
-    font-size: 12px;
+    line-height: 18px;
+    font-size: 14px;
     
 }
 table ,tbody{
