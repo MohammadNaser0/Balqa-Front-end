@@ -6,7 +6,7 @@ html ,body{
     height: 100%;
     width: 100%;
     background: #f0f0f0;
-    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
     display: flex;
 }
 aside{

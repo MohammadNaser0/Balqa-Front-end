@@ -9,7 +9,7 @@ html ,body{
     background-image: url("src/Gate.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
     }
 #login-box {
     height: 100%;
@@ -23,8 +23,8 @@ html ,body{
     font-size:medium;
     box-sizing: border-box; 
     }
-    h1 ,h2{
-        margin-top: 0px;
+    h2 ,h3{
+        margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -47,6 +47,7 @@ input{
         border: none;
     }
 img{
+    margin-top: 55px;
     width:50%;
     }
 #submit{
