@@ -12,12 +12,12 @@ html ,body{
 td ,tr ,th{
     text-align: center;
     border: #000 2px solid;
-    line-height: 15px;
+    line-height: 13px;
     font-size: 14px;
     
 }
 table ,tbody{
-    margin: 40px auto;
+    margin: 30px auto;
     display: table;
     width: 90%;
     text-align: center;
