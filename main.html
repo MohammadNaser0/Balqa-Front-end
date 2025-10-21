@@ -52,6 +52,17 @@ window.addEventListener("touchmove", (e) => {
     isSwiping = false;
   }
 });
+window.addEventListener("touchmove", (e) => {
+  if (!isSwiping) return;
+  currentX = e.touches[0].clientX;
+  let deltaX = Math.min(Math.max(currentX - startX, -260), 0);
+  if (!drawer.classList.contains("open")) {
+    drawer.style.transform = `translateX(${deltaX - 260}px)`;
+  } else {
+    drawer.style.transform = `translateX(${deltaX}px)`;
+  }
+});
+
             ;
             function loadData(){
                 fetch('Test.json')
