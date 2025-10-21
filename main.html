@@ -20,6 +20,9 @@
          }
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
+
+         const drawer = document.getElementById('drawer');
+
             function loadData(){
                 fetch('Test.json')
                 .then(response => response.json())
@@ -42,6 +45,43 @@
                 }
                       
                        window.onload = loadData;
+
+
+
+                       
+// Open and close drawer based on class
+            function toggleDrawer() {
+                drawer.classList.toggle('open');
+            }
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            // Detect swipe gestures
+            function handleTouchStart(event) {
+                touchStartX = event.touches[0].clientX; // Get initial touch position
+            }
+
+            function handleTouchMove(event) {
+                touchEndX = event.touches[0].clientX; // Get current touch position
+            }
+
+            function handleTouchEnd() {
+                if (touchEndX < touchStartX - 50) {
+                    // Swiped left: close drawer
+                    drawer.classList.remove('open');
+                } else if (touchEndX > touchStartX + 50) {
+                    // Swiped right: open drawer
+                    drawer.classList.add('open');
+                }
+            }
+
+            // Event listeners
+            drawer.addEventListener('touchstart', handleTouchStart);
+            drawer.addEventListener('touchmove', handleTouchMove);
+            drawer.addEventListener('touchend', handleTouchEnd);
+            document.getElementById('toggleDrawer').addEventListener('click', toggleDrawer);
+
+
         </script>
         <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
