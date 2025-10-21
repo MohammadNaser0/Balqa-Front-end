@@ -18,19 +18,22 @@
            document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
            if (target) target.style.display = "block";
          }
-         window.addEventListener("hashchange", showSection);
-         window.addEventListener("load", showSection);
-
-         const drawer = document.getElementById('drawer');
-
-            function loadData(){
-                fetch('Test.json')
+        function toggleNav(){
+                 const aside = document.querySelector("aside");
+                 aside.classList.toggle("open")
+                 aside.querySelectorAll("a").forEach(link => {
+                     link.addEventListener("click", () => {
+                     aside.classList.remove("open")});
+                 })
+                 };
+        function loadData(){
+                 fetch('Test.json')
                 .then(response => response.json())
                 .then(data => {
-
-                  const id = data.id;
-                  finance = data.finance;
-
+                     
+                       const id = data.id;
+                       finance = data.finance;
+                     
                   document.getElementById('studnetName').textContent += id.studnetName;
                   document.getElementById('studentMajor').textContent += id.studentMajor;
                   document.getElementById('studentNum').textContent += id.studentNum;
@@ -43,45 +46,9 @@
                    document.getElementById('regPrice').textContent += finance.regPrice;
                    }).catch(err => console.error('Error loading JSON:', err));   
                 }
-                      
-                       window.onload = loadData;
-
-
-
-                       
-// Open and close drawer based on class
-            function toggleDrawer() {
-                drawer.classList.toggle('open');
-            }
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            // Detect swipe gestures
-            function handleTouchStart(event) {
-                touchStartX = event.touches[0].clientX; // Get initial touch position
-            }
-
-            function handleTouchMove(event) {
-                touchEndX = event.touches[0].clientX; // Get current touch position
-            }
-
-            function handleTouchEnd() {
-                if (touchEndX < touchStartX - 50) {
-                    // Swiped left: close drawer
-                    drawer.classList.remove('open');
-                } else if (touchEndX > touchStartX + 50) {
-                    // Swiped right: open drawer
-                    drawer.classList.add('open');
-                }
-            }
-
-            // Event listeners
-            drawer.addEventListener('touchstart', handleTouchStart);
-            drawer.addEventListener('touchmove', handleTouchMove);
-            drawer.addEventListener('touchend', handleTouchEnd);
-            document.getElementById('toggleDrawer').addEventListener('click', toggleDrawer);
-
-
+                    window.addEventListener("hashchange", showSection);
+                    window.addEventListener("load", showSection);
+                    window.onload = loadData;
         </script>
         <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
@@ -103,7 +70,7 @@
                     <a href="#grades">الإمتحانات</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-services"></use></svg>
-                    <a href="#services">خدمات أكاديمية</a></h4></li>
+                    <a href="#services">خدمات الأكاديمية</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-logout"></use></svg>
                     <a href="index.html">تسجيل الخروج</a></h4></li>
@@ -153,7 +120,7 @@
                 <div><a href="SP/dates.html#examScore" class="btn-link">كشف علامات الفصل</a><button onclick="markObjection()">أعتراض على مادة</button></div>
                  </section>
             <section id="services" style="display: none;">
-                <h2>خدمات أكاديمية</h2><hr>
+                <h2>خدمات الأكاديمية</h2><hr>
                 <div><button onclick="changePassowrd()">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="dropOut()">الإنقطاع عن الدراسة</button></div>
                 <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><button onclick="dropClass()">إسقاط المادة</button></div>
             </section>

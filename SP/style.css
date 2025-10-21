@@ -35,7 +35,7 @@ th{
 }
 @media (max-width: 450px) {
     td ,tr ,th{
-        font-size: 9px;
+        font-size: 8px;
     }
   }
 @media (prefers-color-scheme: dark){
