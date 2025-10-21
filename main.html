@@ -20,43 +20,6 @@
          }
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
-
-const drawer = document.getElementById('drawer');
-
-// Open and close drawer based on class
-function toggleDrawer() {
-    drawer.classList.toggle('open');
-}
-
-// Touch detection variables
-let touchStartX = 0;
-let touchEndX = 0;
-
-// Detect swipe gestures
-function handleTouchStart(event) {
-    touchStartX = event.touches[0].clientX; // Get initial touch position
-}
-
-function handleTouchMove(event) {
-    touchEndX = event.touches[0].clientX; // Get current touch position
-}
-
-function handleTouchEnd() {
-    if (touchEndX < touchStartX - 50) {
-        // Swiped left: close drawer
-        drawer.classList.remove('open');
-    } else if (touchEndX > touchStartX + 50) {
-        // Swiped right: open drawer
-        drawer.classList.add('open');
-    }
-}
-
-// Event listeners
-drawer.addEventListener('touchstart', handleTouchStart);
-drawer.addEventListener('touchmove', handleTouchMove);
-drawer.addEventListener('touchend', handleTouchEnd);
-document.getElementById('toggleDrawer').addEventListener('click', toggleDrawer);
-            ;
             function loadData(){
                 fetch('Test.json')
                 .then(response => response.json())
