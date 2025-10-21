@@ -21,14 +21,38 @@
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
 
-         function toggleNav(){
-            const aside = document.querySelector("aside");
-            aside.classList.toggle("open")
-            aside.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
-                aside.classList.remove("open")});
-            })
-            };
+const drawer = document.getElementById("sidebar");
+
+let startX = 0;
+let currentX = 0;
+let isSwiping = false;
+
+window.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  
+  // Only start swipe if near left edge or drawer is open
+  isSwiping = startX < 50 || drawer.classList.contains("open");
+});
+
+window.addEventListener("touchmove", (e) => {
+  if (!isSwiping) return;
+  
+  currentX = e.touches[0].clientX;
+  let deltaX = currentX - startX;
+
+  // Open gesture
+  if (!drawer.classList.contains("open") && deltaX > 100) {
+    drawer.classList.add("open");
+    isSwiping = false;
+  }
+
+  // Close gesture
+  if (drawer.classList.contains("open") && deltaX < -100) {
+    drawer.classList.remove("open");
+    isSwiping = false;
+  }
+});
+            ;
             function loadData(){
                 fetch('Test.json')
                 .then(response => response.json())
@@ -52,7 +76,7 @@
                       
                        window.onload = loadData;
         </script>
-        <aside id="sideBar">
+        <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
                 <li><h4>
