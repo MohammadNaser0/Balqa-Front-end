@@ -84,6 +84,7 @@ button, a.btn-link {
 #idCard{
   display: flex;
   text-align:right;
+  font-size: 16px;
 }
 #idPicture{
   border: #2e7d32 7px solid;

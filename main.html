@@ -21,48 +21,41 @@
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
 
-const drawer = document.getElementById("sidebar");
+const drawer = document.getElementById('drawer');
 
-let startX = 0;
-let currentX = 0;
-let isSwiping = false;
+// Open and close drawer based on class
+function toggleDrawer() {
+    drawer.classList.toggle('open');
+}
 
-window.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  
-  // Only start swipe if near left edge or drawer is open
-  isSwiping = startX < 50 || drawer.classList.contains("open");
-});
+// Touch detection variables
+let touchStartX = 0;
+let touchEndX = 0;
 
-window.addEventListener("touchmove", (e) => {
-  if (!isSwiping) return;
-  
-  currentX = e.touches[0].clientX;
-  let deltaX = currentX - startX;
+// Detect swipe gestures
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX; // Get initial touch position
+}
 
-  // Open gesture
-  if (!drawer.classList.contains("open") && deltaX > 100) {
-    drawer.classList.add("open");
-    isSwiping = false;
-  }
+function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX; // Get current touch position
+}
 
-  // Close gesture
-  if (drawer.classList.contains("open") && deltaX < -100) {
-    drawer.classList.remove("open");
-    isSwiping = false;
-  }
-});
-window.addEventListener("touchmove", (e) => {
-  if (!isSwiping) return;
-  currentX = e.touches[0].clientX;
-  let deltaX = Math.min(Math.max(currentX - startX, -260), 0);
-  if (!drawer.classList.contains("open")) {
-    drawer.style.transform = `translateX(${deltaX - 260}px)`;
-  } else {
-    drawer.style.transform = `translateX(${deltaX}px)`;
-  }
-});
+function handleTouchEnd() {
+    if (touchEndX < touchStartX - 50) {
+        // Swiped left: close drawer
+        drawer.classList.remove('open');
+    } else if (touchEndX > touchStartX + 50) {
+        // Swiped right: open drawer
+        drawer.classList.add('open');
+    }
+}
 
+// Event listeners
+drawer.addEventListener('touchstart', handleTouchStart);
+drawer.addEventListener('touchmove', handleTouchMove);
+drawer.addEventListener('touchend', handleTouchEnd);
+document.getElementById('toggleDrawer').addEventListener('click', toggleDrawer);
             ;
             function loadData(){
                 fetch('Test.json')
@@ -107,7 +100,7 @@ window.addEventListener("touchmove", (e) => {
                     <a href="#grades">الإمتحانات</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-services"></use></svg>
-                    <a href="#services">خدمات الأكاديمية</a></h4></li>
+                    <a href="#services">خدمات أكاديمية</a></h4></li>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-logout"></use></svg>
                     <a href="index.html">تسجيل الخروج</a></h4></li>
@@ -157,7 +150,7 @@ window.addEventListener("touchmove", (e) => {
                 <div><a href="SP/dates.html#examScore" class="btn-link">كشف علامات الفصل</a><button onclick="markObjection()">أعتراض على مادة</button></div>
                  </section>
             <section id="services" style="display: none;">
-                <h2>خدمات الأكاديمية</h2><hr>
+                <h2>خدمات أكاديمية</h2><hr>
                 <div><button onclick="changePassowrd()">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="dropOut()">الإنقطاع عن الدراسة</button></div>
                 <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><button onclick="dropClass()">إسقاط المادة</button></div>
             </section>
