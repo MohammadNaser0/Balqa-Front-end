@@ -23,7 +23,7 @@ html ,body{
     box-sizing: border-box; 
     }
     h2 ,h3{
-        margin: 10px;
+        margin: 5px 0px;
     }
 section{
     display: block;
@@ -45,7 +45,7 @@ input{
     }
 img{
     margin-top: 55px;
-    width:50%;
+    width:40%;
     }
 #submit{
     font-size: medium;
