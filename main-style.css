@@ -9,6 +9,9 @@ html ,body{
     overflow: hidden;
     display: flex;
 }
+h2{
+  margin-top: 0;
+}
 aside{
   background: #2e7d32; 
   width: 300px;
