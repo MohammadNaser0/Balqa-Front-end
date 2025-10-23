@@ -27,7 +27,7 @@ html ,body{
     }
 section{
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     }
 a{
     display: block;
@@ -52,7 +52,7 @@ img{
     font-family:system-ui, sans-serif;
     width: 100px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
     }
 footer {
     bottom: 0;
@@ -79,7 +79,7 @@ footer {
         border: none;
     }
     a, a:visited{
-    color: black;
+    color: #2e7d32;
     text-decoration: none;
 }
     }
