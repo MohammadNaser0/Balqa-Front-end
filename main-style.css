@@ -107,6 +107,7 @@ button, a.btn-link {
   }
   section{
     text-align: center;
+    z-index: 0;
   }
   #idCard{
     flex-direction: column;
