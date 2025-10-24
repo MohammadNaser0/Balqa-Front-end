@@ -27,29 +27,10 @@
                      aside.classList.remove("open")});
                  })
                  };
-        function loadData(){
-                 fetch('Test.json')
-                .then(response => response.json())
-                .then(data => {
-                     
-                       const id = data.id;
-                       finance = data.finance;
-                     
-                  document.getElementById('studnetName').textContent += id.studnetName;
-                  document.getElementById('studentMajor').textContent += id.studentMajor;
-                  document.getElementById('studentNum').textContent += id.studentNum;
-                  document.getElementById('studentState').textContent += id.studentState;
-                  document.getElementById("idPicture").src = id.idPicture;
-
-                   document.getElementById('sponsor').textContent += finance.sponsor;
-                  document.getElementById('debt').textContent += finance.debt;
-                  document.getElementById('creditPrice').textContent += finance.creditPrice;
-                   document.getElementById('regPrice').textContent += finance.regPrice;
-                   }).catch(err => console.error('Error loading JSON:', err));   
-                }
                     window.addEventListener("hashchange", showSection);
                     window.addEventListener("load", showSection);
-                    window.onload = loadData;
+        </script>
+        <script type="Module" src="JS/services.js">
         </script>
         <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
@@ -127,15 +108,8 @@
             </section>
         </main>
         <script>
-             function CalculateTotal() {
-            const finance = window.finance;
-
-            const credit = parseFloat(document.getElementById('numOfCredits').value) || 0;
-            let total = finance.debt + (finance.creditPrice * credit) + finance.regPrice;
-            
-            document.getElementById('total').textContent ="المبلغ المطلوب: "+ total; // Use the correct ID for an element.
-        }
-        
+      
         </script>
     </body> 
+
 </html>

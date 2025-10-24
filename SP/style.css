@@ -14,16 +14,24 @@ td ,tr ,th{
     border: #000 2px solid;
     line-height: 18px;
     font-size: 14px;
-    
 }
-table ,tbody{
+table{
+    width: 90%;
     margin: 30px auto;
+}
+tbody ,thead{
+    margin: 0;
     display: table;
     width: 90%;
     text-align: center;
-    border: #000 1px solid;
+    border: #28a745 1px solid;
     border-collapse: collapse;
     border-radius: 1px;
+    table-layout: fixed;
+}
+tbody{
+    margin: 0;
+    width: 90%;
 }
 tbody{
     margin: 0;
