@@ -11,31 +11,37 @@ html ,body{
 }
 td ,tr ,th{
     text-align: center;
-    border: #000 2px solid;
+    border: #28a745 2px solid;
     line-height: 18px;
     font-size: 14px;
 }
 table{
+    font-family: 'Cairo', sans-serif;
+    table-layout: fixed;  
+    text-align: center;
+    border: #28a745 2px solid;
+    border-collapse: collapse;
+    border-radius: 1px;
     width: 90%;
     margin: 30px auto;
+    table-layout: fixed;  
+    
 }
 tbody ,thead{
     margin: 0;
-    display: table;
-    width: 90%;
-    text-align: center;
-    border: #28a745 1px solid;
-    border-collapse: collapse;
-    border-radius: 1px;
-    table-layout: fixed;
-}
-tbody{
-    margin: 0;
-    width: 90%;
-}
-tbody{
-    margin: 0;
     width: 100%;
+    text-align: center;
+}
+button{
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+        background-color: #2e7d32;
+        color: #ffffff;
+        border: none;
+        font-size: medium;
+        padding: 15px;
+        margin-top: 10px;
+    
 }
 th{
     background-color: #37a13c;
