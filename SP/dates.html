@@ -11,7 +11,7 @@
            let hash = location.hash || "exa";
            const target = document.querySelector(hash);
            document.querySelectorAll("body table").forEach(sec => sec.style.display = "none");
-           if (target) target.style.display = "block";
+           if (target) target.style.display = "table";
          }
          window.addEventListener("hashchange", showSection);
          window.addEventListener("load", showSection);
@@ -25,7 +25,8 @@
                     <th id="examHall">قاعات الإمتحان</th>
                 </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                </tbody>
         </table>
          <table id="schedule">
             <thead>
@@ -40,13 +41,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                    <td>23215464</td>
-                </tr>
                 </tbody>
         </table>
          <table id="examScore">
-        <tbody>
+        <thead>
             <tr>
                 <th id="courseID" style="width: 15%;">رقم المادة</th>
                 <th id="courseName" style="width: 25%;">أسم المادة</th>
@@ -55,7 +53,10 @@
                 <th id="courseMark" style="width: 25%;">العلامة النهائية</th>
                 <th id="courseNotes"style="width: 5%;">ملاحظات</th>
             </tr>
-        </tbody>
+        </thead>
+            <tbody>
+            </tbody>
     </table>
+    <button onclick="history.back()">العودة</button>
 </body>
 </html>
