@@ -2,13 +2,39 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, orientation=portrait">
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="Style.css" as="style">
     <link rel="stylesheet" href="style.css">
     <title>تسجيل</title>
+    <style>
+        div{
+            width: 90%;
+            margin: 40px auto;
+            padding: 10px;
+            border: #2e7d32 solid 2px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-        <div id="hours"></div>
+        <div id="hours">
+<h2>معلومات الخطة</h2>
+<label id="title" style="color: red;">متطلب جامعة إختياري:</label>
+<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> 
+<label id="title" style="color: red;">متطلب جامعة إجباري:</label>
+<label><span id="classification_2">21</span> من <span>21</span> ساعة معتمدة</label>
+<label id="title" style="color: red;">متطلب كلية إجباري:</label>
+<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label><br> 
+<label id="title" style="color: red;">متطلب كلية إختياري:</label>
+<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> 
+<label id="title" style="color: red;">متطلب تخصص إختياري:</label>
+<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> 
+<label id="title" style="color: red;">:متطلب تخصص إجباري</label>
+<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> <br>
+        </div>
+
+
         <div id="reg-schedule">
             <table>
                 <thead>
@@ -26,6 +52,12 @@
                 <tbody>
                 </tbody>
             </table>
+                <button onclick="">تثبيت</button>
+        </div>
+
+
+        <div id="cousres">
+            content
         </div>
         <button onclick="history.back()">العودة</button>
 </body>
