@@ -29,29 +29,28 @@ section{
     display: block;
     margin-top: 10px;
     }
-a{
-    display: block;
+a, a:visited{
+    color: #2e7d32;
     text-decoration: none;
+    display: block;
     font-size: small;
-    }
+}
 input{
     border-radius: 8px;
     font-family: 'Cairo', sans-serif;
     }   
-    input[type="submit"]{
+input[type="submit"]{
         background-color: #2e7d32;
         color: #ffffff;
         border: none;
-    }
+        font-size: medium;
+        width: 100px;
+        height: 50px;
+        margin-top: 10px;
+        }
 img{
     margin-top: 55px;
     width:40%;
-    }
-#submit{
-    font-size: medium;
-    width: 100px;
-    height: 50px;
-    margin-top: 10px;
     }
 footer {
     bottom: 0;
@@ -61,10 +60,6 @@ footer {
     margin-right: auto;
     position: absolute;
     }
-    a, a:visited{
-    color: black;
-    text-decoration: none;
-   }
 @media (max-width: 450px) {
     html ,body{
         background-image: none;
@@ -77,10 +72,7 @@ footer {
         text-align: center;
         border: none;
     }
-    a, a:visited{
-    color: #2e7d32;
-    text-decoration: none;
-}
+
     }
     @media (prefers-color-scheme: dark){
         #login-box {
