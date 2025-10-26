@@ -99,7 +99,7 @@ button, a.btn-link {
 }
 @media (max-width: 450px) {
   aside {
-    transform: translateX(100vh); 
+    transform: translateX(100%); 
     width: 100%;
     font-size:small;
   }
