@@ -30,7 +30,14 @@
                     window.addEventListener("hashchange", showSection);
                     window.addEventListener("load", showSection);
         </script>
-        <script type="Module" src="JS/services.js">
+        <script type="Module">
+          import * as funcs from "./JS/services.js";
+
+        // Make all exported functions global
+        Object.assign(window, funcs);
+                
+        // Debug: check if functions are now global
+           console.log("dropSemester in window:", window.dropSemester);
         </script>
         <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
@@ -53,6 +60,9 @@
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-services"></use></svg>
                     <a href="#services">خدمات الأكاديمية</a></h4></li>
+                    <li><h4><svg class="icon"><use href="src/icons.svg#icon-reg"></use></svg>
+                    <a href="https://forms.gle/gfXUTrLVhGupPxXP7">إستبيان</a></h4></li>
+                <li><h4>
                 <li><h4>
                     <svg class="icon"><use href="src/icons.svg#icon-logout"></use></svg>
                     <a href="index.html">تسجيل الخروج</a></h4></li>
@@ -71,7 +81,7 @@
                         <p id="studentState">الحالة الدراسية: </p>
                         </div>
                     </div><hr> 
-                    <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onclick="showEmailInfo()">بيانات الحساب</button><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><a href="SP/alibis.html" class="btn-link">أعذار الطالب</a></div>
+                    <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="https://s1.ebalqa.courses/ncentermoodle/" class="btn-link">التعليم الإلكتروني</a><a href="https://www.bau.edu.jo/taqweem.aspx" class="btn-link">التقويم الجامعي</a><button onclick="showEmailInfo()">بيانات الحساب</button></div>
             </section>
              <section id="announcement"style="display: none;">
                 <h2>الإعلانات</h2><hr>
@@ -80,7 +90,7 @@
             <section id="registration" style="display: none;">
                 <h2>تسجيل المواد</h2>
                     <hr>
-                <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
+                <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="https://app2.bau.edu.jo:7799/courses/index.jsp?param=1" class="btn-link">حساب المعدل </a></div>
                 <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="src/document.pdf" class="btn-link">الخطة الدراسية</a><button onclick="delaySemester()">تأجيل الفصل</button></div>
             </section>
             <section id="Finance" style="display: none;">
@@ -89,27 +99,24 @@
                     <p id="debt">ذمم:</p>
                     <p id="creditPrice">سعر الساعة: </p> 
                     <p id="regPrice">رسوم التسجيل: </p>
-                    <form id="calc">
-                        <label for="numOfCredits">عدد الساعات:<input id="numOfCredits" required type="number" min="12" max="21" value="12"></label><p id="total" >المبلغ المطلوب: </p>
+                        <label for="numOfCredits">عدد الساعات:<input id="numOfCredits" required type="number" min="12" max="21" value="12"></label><p id="total" >المبلغ المطلوب:0 </p>
                         <button id="calculate" onclick="CalculateTotal()">حساب الرسوم</button>
-                    </form>
                     <hr>
                     <a class="btn-link" href="SP/Receipts.html">الوصلات المالية</a>
             </section>
             <section id="grades" style="display: none;">
                 <h2>الإمتحانات</h2>
                 <hr>
-                <div><a href="SP/dates.html#examDate" class="btn-link">جدول الإمتحانات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a><a href="SP/marksheet.html" class="btn-link">كشف العلامات </a></div>
-                <div><a href="SP/dates.html#examScore" class="btn-link">علامات الفصل</a><button onclick="markObjection()">أعتراض على مادة</button></div>
+                <div><a href="SP/dates.html#examDate" class="btn-link">جدول الإمتحانات</a><a href="https://app3.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a><a href="SP/alibis.html" class="btn-link">أعذار الطالب</a></div>
+                <div><a href="SP/dates.html#examScore" class="btn-link">علامات الفصل</a><button onclick="markObjection()">أعتراض على مادة</button><a href="SP/marksheet.html" class="btn-link">كشف العلامات </a></div>
                  </section>
             <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
-                <div><button onclick="changePassowrd()">تغيير كلمة السر</button><a href="SP/clearance.html" class="btn-link">براءة ذمة</a><button onclick="dropOut()">الإنقطاع عن الدراسة</button></div>
-                <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><button onclick="dropClass()">إسقاط المادة</button></div>
+                <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><!--<a href="SP/clearance.html" class="btn-link">براءة ذمة</a>--><button onclick="dropClass()">إسقاط المادة</button></div>
+                <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a href="SP/equivalence.html" class="btn-link">معادلة المواد</a></div>
             </section>
         </main>
         <script>
-      
         </script>
     </body> 
 

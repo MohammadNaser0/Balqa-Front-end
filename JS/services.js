@@ -1,19 +1,23 @@
-/*changePassowrd(){
+export async function changePassowrd(){
+  alert("قريباً");
 }
-doTransfer(){
+export async function doTransfer(){
+  alert("تم نقلك")
 }
-dropSemester(){
+export async function dropSemester(){
+  prompt("أكتب رقمك الوطني لإسقاط الفصل");
+}
+
+export async function dropClass(){
+  prompt("أكتب رقم المادة لإسقاطها ");
 
 }
-dropClass(){
-
+export async function dropOut(){
+  prompt("أكتب رقمك الوطني لإسقاط الفصل");
 }
-dropOut(){
-
+export async function markObjection(){
+ prompt("أكتب رقم المادة للإعتراض عليها ");
 }
-markObjection(){
-
-}*/
 window.data = null;
 export async function getData(){
     if (window.dataCache) return window.data;
@@ -34,7 +38,6 @@ export async function CalculateTotal() {
             let total = finance.debt + (finance.creditPrice * credit) + finance.regPrice;
             document.getElementById('total').textContent ="المبلغ المطلوب: "+ total; // Use the correct ID for an element.
         }
-        window.CalculateTotal = CalculateTotal;
 export async function loadData(){
         const data = await getData(); // fetch or get cached JSON
   try {
