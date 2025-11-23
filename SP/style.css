@@ -30,7 +30,7 @@ tbody ,thead{
     width: 100%;
     text-align: center;
 }
-button{
+button , a.btn-link {
     display: block;
     border-radius: 8px;
     font-family: 'Cairo', sans-serif;
@@ -39,7 +39,8 @@ button{
     border: none;
     padding: 10px;
     margin: 0 auto;
-    
+    width: fit-content;
+     font-family: inherit;
 }
 th{
     background-color: #37a13c;
