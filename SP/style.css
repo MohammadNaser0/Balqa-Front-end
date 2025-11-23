@@ -9,15 +9,15 @@ html ,body{
 }
 td ,tr ,th{
     text-align: center;
-    border: #28a745 2px solid;
+    border: #37a13c 2px solid;
     line-height: 18px;
-    font-size: 14px;
+    font-size: 12px;
 }
 table{
     font-family: 'Cairo', sans-serif;
     table-layout: fixed;  
     text-align: center;
-    border: #28a745 2px solid;
+    border: #37a13c 2px solid;
     border-collapse: collapse;
     border-radius: 1px;
     width: 90%;
@@ -56,8 +56,6 @@ th{
             color: #f0f0f0;
             background-color:#181818;
         }
-        table,tbody,td ,tr ,th{
-            border-color: #28a745;
-        }
+
     }
   
