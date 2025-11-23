@@ -60,4 +60,8 @@ export async function loadData(){
     console.error('Error loading JSON:', err);
   }
                 }
+
+  export function showUserInfo(){
+
+  }
 document.addEventListener('DOMContentLoaded', loadData);
