@@ -21,7 +21,6 @@ export async function markObjection(){
 window.data = null;
 export async function getData(){
     if (window.dataCache) return window.data;
-
   try {
     const response = await fetch("Test.json");
     const data = await response.json();
@@ -29,22 +28,20 @@ export async function getData(){
     return data;
   } catch (err) {
     console.error("Error loading JSON:", err);
-    return null;
   }
 }
 export async function CalculateTotal() {
          const finance = data.finance;
             const credit = parseFloat(document.getElementById('numOfCredits').value) || 0;
             let total = finance.debt + (finance.creditPrice * credit) + finance.regPrice;
-            document.getElementById('total').textContent ="المبلغ المطلوب: "+ total; // Use the correct ID for an element.
+            document.getElementById('total').textContent ="المبلغ المطلوب: "+ total;
         }
 export async function loadData(){
-        const data = await getData(); // fetch or get cached JSON
+        const data = await getData(); 
   try {
     for (let sectionKey in data) {
       const sectionData = data[sectionKey];
 
-      // Loop through each property in that section
       for (let key in sectionData) {
         const element = document.getElementById(key);
         if (!element) continue;
@@ -61,7 +58,26 @@ export async function loadData(){
   }
                 }
 
-  export function showUserInfo(){
+  export async function  showUserInfo(){
+       const data = await getData(); 
+       try{
+         let slide  = document.getElementById("slide") ,slideContent = document.getElementById("slide-content") ,userInfo =data.accessInfo;
+           slide.classList.add("open");
 
+           if (!userInfo){
+              slideContent.innerHTML = `<p>Section "${userInfo}" not found.</p>`;
+              return;
+           }
+           let html = `<h2>userInfo</h2>`;
+            for (const key in userInfo) {
+              html += `
+                <p><strong>${key}:</strong> ${userInfo[key]}</p>
+              `;
+            }
+          slideContent.innerHTML = html;
+       }
+       catch (err){
+        console.error('Error loading JSON:', err);
+       }
   }
 document.addEventListener('DOMContentLoaded', loadData);

@@ -32,12 +32,7 @@
         </script>
         <script type="Module">
           import * as funcs from "./JS/services.js";
-
-        // Make all exported functions global
         Object.assign(window, funcs);
-                
-        // Debug: check if functions are now global
-           console.log("dropSemester in window:", window.dropSemester);
         </script>
         <aside id="drawer">
             <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
@@ -115,11 +110,9 @@
                 <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><!--<a href="SP/clearance.html" class="btn-link">براءة ذمة</a>--><button onclick="dropClass()">إسقاط المادة</button></div>
                 <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a class="btn-link">معادلة المواد</a></div>
             </section>
-            <div id="slide" class="slide">
-              <div id="slide-content"></div>
-            </div>
         </main>
-        <script>
-        </script>
+        <dialog id="slide" class="slide">
+              <div id="slide-content"></div>
+            </dialog>
     </body> 
 </html>
