@@ -5,18 +5,21 @@ export async function doTransfer(){
   alert("تم نقلك")
 }
 export async function dropSemester(){
-  prompt("أكتب رقمك الوطني لإسقاط الفصل");
+  prompt("أكتب رقمك الوطني لإسقاط الفصل:");
 }
 
 export async function dropClass(){
-  prompt("أكتب رقم المادة لإسقاطها ");
+  prompt("أكتب رقم المادة لإسقاطها:");
 
 }
 export async function dropOut(){
-  prompt("أكتب رقمك الوطني لإسقاط الفصل");
+  prompt("أكتب رقمك الوطني لإسقاط الفصل:");
 }
 export async function markObjection(){
- prompt("أكتب رقم المادة للإعتراض عليها ");
+ prompt("أكتب رقم المادة للإعتراض عليها: ");
+}
+export async function delaySemester(){
+  شمثقف("تم تأجيل فصلك.")
 }
 window.data = null;
 export async function getData(){
@@ -59,25 +62,6 @@ export async function loadData(){
                 }
 
   export async function  showUserInfo(){
-       const data = await getData(); 
-       try{
-         let slide  = document.getElementById("slide") ,slideContent = document.getElementById("slide-content") ,userInfo =data.accessInfo;
-           slide.classList.add("open");
-
-           if (!userInfo){
-              slideContent.innerHTML = `<p>Section "${userInfo}" not found.</p>`;
-              return;
-           }
-           let html = `<h2>userInfo</h2>`;
-            for (const key in userInfo) {
-              html += `
-                <p><strong>${key}:</strong> ${userInfo[key]}</p>
-              `;
-            }
-          slideContent.innerHTML = html;
-       }
-       catch (err){
-        console.error('Error loading JSON:', err);
-       }
+      alert("بريدك الإلكتروني:33501234567@gmail.com \n كلمة سر البريد الإلكتروني: ********  👁️‍🗨️ \n كلمة سر التعليم الإلكتروني:**********  👁️‍🗨️\n مؤقت ,سيتم إستبداله")
   }
 document.addEventListener('DOMContentLoaded', loadData);

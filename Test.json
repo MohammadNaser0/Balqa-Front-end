@@ -4,7 +4,7 @@
     "studnetName": "أحمد محمود محمد الفلاني ",
     "studentMajor": "أدب عربي",
     "studentfaculty":"كلية السلط للعلوم الإنسانية",
-    "studentNum": "32501234567",
+    "studentNum": "33501234567",
     "studentState": "على مقاعد الدراسة",
     "cardSub":false ,
     "didEqualize":false
@@ -16,7 +16,7 @@
         "regPrice": 55
     },
     "accessInfo":{
-        "email":"loremipsum@gmail.com",
+        "email":"33501234567@gmail.com",
         "emailPassword":"test@9873",
         "phone":"0771234567",
         "moodlePassword":"30165498"},
