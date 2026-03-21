@@ -6,9 +6,9 @@ html ,body{
     height: 100%;
     width: 100%;
     direction: rtl;
-    background-image: url("src/admin.png");
+    background-image: url("src/1607412310316.jpg");
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:contain;
     }
 #login-box {
     height: 100%;
