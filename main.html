@@ -112,8 +112,28 @@
                 <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a class="btn-link" href="https://app1.bau.edu.jo:7799/gradeequiv/login.jsp">معادلة المواد</a></div>
             </section>
         </main>
-        <dialog id="slide" class="slide">
-              <div id="slide-content"></div>
-            </dialog>
+        <dialog id="userInfo" style="border: none;">
+            <h3>بيانات تسجيل الدخول</h3> 
+               <form method="dialog" autocomplete="off">
+                <div>
+                <div>
+                  <label>البريد الإلكتروني:</label><br>
+                  <input style="all: unset; direction: ltr;" type="text" id="studentEmail" name="user_field" autocomplete="off" readonly>
+                </div>
+                <div>
+                  <label>كلمة المرورالبريد الإلكتروني:</label><br>
+                  <input style="all: unset;" type="password" id="studentEmailPwd" name="pass-field" autocomplete="off" readonly>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleEmailPwd()">👁️</button>
+                </div>
+                <div>
+                  <label>كلمة المرور التعليم الإلكتروني</label><br>
+                  <input style="all: unset;" type="password" id="moodlePwd" name="pass-field" autocomplete="off" readonly>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleMoodlePwd()">👁️</button>
+                </div>
+                <div >
+              <button class="close-btn">إغلاق</button>
+            </div>
+          </form>
+        </dialog>
     </body> 
 </html>
