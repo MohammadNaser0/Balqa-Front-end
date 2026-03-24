@@ -108,7 +108,7 @@
                  </section>
             <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
-                <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><!--<a href="SP/clearance.html" class="btn-link">براءة ذمة</a>--><button onclick="dropClass()">إسقاط المادة</button></div>
+                <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><!--<a href="SP/clearance.html" class="btn-link">براءة ذمة</a>--><button onclick="dropClass()">إسقاط المادة</button><a class="btn-link" href="https://train.bau.edu.jo/">التدريب الميداني</a></div>
                 <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a class="btn-link" href="https://app1.bau.edu.jo:7799/gradeequiv/login.jsp">معادلة المواد</a></div>
             </section>
         </main>
@@ -123,12 +123,12 @@
                 <div>
                   <label>كلمة المرورالبريد الإلكتروني:</label><br>
                   <input style="all: unset;" type="password" id="studentEmailPwd" name="pass-field" autocomplete="off" readonly>
-                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleEmailPwd()">👁️</button>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleEmailPwd()"><svg class="icon"><use href="src/icons.svg#icon-show"></use></svg></button>
                 </div>
                 <div>
                   <label>كلمة المرور التعليم الإلكتروني</label><br>
                   <input style="all: unset;" type="password" id="moodlePwd" name="pass-field" autocomplete="off" readonly>
-                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleMoodlePwd()">👁️</button>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleMoodlePwd()"><svg class="icon"><use href="src/icons.svg#icon-show"></use></svg></button>
                 </div>
                 <div >
               <button class="close-btn">إغلاق</button>
