@@ -19,9 +19,10 @@ export async function markObjection(){
  prompt("أكتب رقم المادة للإعتراض عليها: ");
 }
 export async function delaySemester(){
-  شمثقف("تم تأجيل فصلك.")
+  prompt("تم تأجيل فصلك.")
 }
 window.data = null;
+
 export async function getData(){
     if (window.dataCache) return window.data;
   try {
@@ -33,12 +34,14 @@ export async function getData(){
     console.error("Error loading JSON:", err);
   }
 }
+
 export async function CalculateTotal() {
          const finance = data.finance;
             const credit = parseFloat(document.getElementById('numOfCredits').value) || 0;
             let total = finance.debt + (finance.creditPrice * credit) + finance.regPrice;
             document.getElementById('total').textContent ="المبلغ المطلوب: "+ total;
-        }
+}
+
 export async function loadData(){
         const data = await getData(); 
   try {
@@ -51,6 +54,9 @@ export async function loadData(){
 
         if (element.tagName === "IMG") {
           element.src = sectionData[key];
+        } 
+        else if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+          element.value = sectionData[key]; 
         } else {
           element.textContent += sectionData[key];
         }
@@ -59,9 +65,19 @@ export async function loadData(){
   } catch (err) {
     console.error('Error loading JSON:', err);
   }
-                }
+  }
 
   export async function  showUserInfo(){
-      alert("بريدك الإلكتروني:33501234567@Bau.jo\n كلمة سر البريد الإلكتروني: ********  👁️‍🗨️ \n كلمة سر التعليم الإلكتروني:**********  👁️‍🗨️\n مؤقت ,سيتم إستبداله")
+    const modal = document.querySelector('dialog');
+    modal.showModal(); // فتح النافذة
+  }
+
+  export async function toggleEmailPwd() {
+    const pwdInput = document.getElementById('studentEmailPwd');
+    pwdInput.type = pwdInput.type === 'password' ? 'text' : 'password';
+  }
+    export async function toggleMoodlePwd() {
+    const pwdInput = document.getElementById('moodlePwd');
+    pwdInput.type = pwdInput.type === 'password' ? 'text' : 'password';
   }
 document.addEventListener('DOMContentLoaded', loadData);

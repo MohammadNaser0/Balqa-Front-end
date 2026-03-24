@@ -16,10 +16,10 @@
         "regPrice": 55
     },
     "accessInfo":{
-        "email":"33501234567@gmail.com",
-        "emailPassword":"test@9873",
-        "phone":"0771234567",
-        "moodlePassword":"30165498"},
+        "studentEmail":"33501234567@std.edu.jo",
+        "studentEmailPwd":"test@9873",
+        "phoneNum":"0771234567",
+        "moodlePwd":"30165498"},
     "Courses":{
         "english101":{
             "courseID":1234567,
