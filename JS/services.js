@@ -68,8 +68,13 @@ export async function loadData(){
   }
 
   export async function  showUserInfo(){
-    const modal = document.querySelector('dialog');
-    modal.showModal(); // فتح النافذة
+    const modal = document.getElementById('userInfo');
+    modal.showModal();
+  }
+  
+    export async function  showCardSubmition(){
+    const cardModal = document.getElementById('userCard');
+    cardModal.showModal();
   }
 
   export async function toggleEmailPwd() {

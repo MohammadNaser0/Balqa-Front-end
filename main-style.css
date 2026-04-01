@@ -108,6 +108,12 @@ dialog div{
   text-align: right;
   margin: 30px 15px;
 }
+#userCard div {
+  color: #000;
+  text-align: right;
+  margin: 20px 5px;
+  direction: ltr;
+}
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
 }
@@ -138,8 +144,9 @@ dialog::backdrop {
       display: inline-block;
   }
   dialog div :not(.close-btn){
+  direction: rtl;
   text-align: right;
-  margin: 10px;
+  margin: 0px;
 }
   .slide {
   position: fixed;

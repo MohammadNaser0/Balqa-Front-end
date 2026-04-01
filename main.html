@@ -108,8 +108,8 @@
                  </section>
             <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
-                <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><!--<a href="SP/clearance.html" class="btn-link">براءة ذمة</a>--><button onclick="dropClass()">إسقاط المادة</button><a class="btn-link" href="https://train.bau.edu.jo/">التدريب الميداني</a></div>
-                <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a class="btn-link" href="https://app1.bau.edu.jo:7799/gradeequiv/login.jsp">معادلة المواد</a></div>
+                <div><button onclick="showCardSubmition()">طلب البطاقة الذكية</button><button onclick="changePassowrd()">تغيير كلمة السر</button><button onclick="dropClass()">إسقاط المادة</button><a class="btn-link" href="https://train.bau.edu.jo/">التدريب الميداني</a></div>
+                <div><button onclick="doTransfer()">طلب تحويل</button><button onclick="dropSemester()">إسقاط الفصل</button><a class="btn-link" href="https://app1.bau.edu.jo:7799/gradeequiv/login.jsp">معادلة المواد</a><a class="btn-link" href="SP/clearance.html">براءة الذمة</a></div>
             </section>
         </main>
         <dialog id="userInfo" style="border: none;">
@@ -135,10 +135,11 @@
             </div>
           </form>
         </dialog>
-        <dialog id="userCard">
-            <form action="dialog" autocomplete="off">
+        <dialog id="userCard" style="border: none;">
+            <form method="dialog" autocomplete="off">
+                <h2>طلب بطاقة ذكية</h2>
+                <p>الإسم الرباعي في اللغة الإنجليزية</p>
                 <div>
-                    <p>الإسم الرباعي في اللغة الإنجليزية</p>
                     <label for="name1"></label><input type="text" name="name1" id="name1" placeholder="الإسم الأول">
                 </div>
                 <div>
@@ -154,9 +155,9 @@
                     <label for="email"></label><input type="email" name="email" id="email" placeholder="البريد الإلكتروني">
                 </div>
                 <div>
-                    <label for="mobile_no"></label><input type="number" name="mobile_no" id="mobile_no" placeholder="رقم الهاتف">
+                    <label for="mobile_no"></label><input type="tel" name="mobile_no" id="mobile_no" placeholder="رقم الهاتف">
                 </div>
-                <button value="إعتماد" onclick="doSubmitInfo()">إغلاق</button>
+                <button value="إعتماد" onclick="doSubmitInfo()">إعتماد</button>
             </form>
         </dialog>
     </body> 
