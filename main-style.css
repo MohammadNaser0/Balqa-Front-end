@@ -104,9 +104,15 @@ dialog{
   text-align: center;
 }
 dialog div{
-  color: #f0f0f0;
+  color: #000;
   text-align: right;
   margin: 30px 15px;
+}
+#userCard div {
+  color: #000;
+  text-align: right;
+  margin: 20px 5px;
+  direction: ltr;
 }
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
@@ -138,9 +144,9 @@ dialog::backdrop {
       display: inline-block;
   }
   dialog div :not(.close-btn){
-  color: #f0f0f0;
+  direction: rtl;
   text-align: right;
-  margin: 10px;
+  margin: 0px;
 }
   .slide {
   position: fixed;
@@ -152,7 +158,6 @@ dialog::backdrop {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   z-index: 99999;
 }
-
 .slide.open {
   top: 0;
 }
@@ -166,4 +171,9 @@ dialog::backdrop {
           color: #f0f0f0;
           background-color: #181818;
         }
+          dialog div :not(.close-btn){
+          color: #f0f0f0;
+          text-align: right;
+          margin: 10px;
+}
     }
