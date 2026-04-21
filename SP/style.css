@@ -46,6 +46,9 @@ th{
     background-color: #37a13c;
     color: #f0f0f0;
 }
+.side{
+    margin: 0 auto;
+}
 @media (max-width: 450px) {
     td ,tr ,th{
         font-size:7px;

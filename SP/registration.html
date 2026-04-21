@@ -9,7 +9,8 @@
      <link rel="icon" type="image/x-icon" href="..\src\logo1.png">
     <title>تسجيل</title>
     <style>
-        div{
+        div:not(.side){
+            text-align: center;
             width: 90%;
             margin: 40px auto;
             padding: 10px;
@@ -19,20 +20,10 @@
     </style>
 </head>
 <body>
-        <div id="hours" style="font-size: smaller;">
-<h4>معلومات الخطة</h4>
-<label id="title" style="color: red;">متطلب جامعة إختياري:</label>br
-<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label><br>
-<label id="title" style="color: red;">متطلب جامعة إجباري:</label>
-<label><span id="classification_2">21</span> من <span>21</span> ساعة معتمدة</label><br>
-<label id="title" style="color: red;">متطلب كلية إجباري:</label>
-<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label><br> 
-<label id="title" style="color: red;">متطلب كلية إختياري:</label>
-<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> <br>
-<label id="title" style="color: red;">متطلب تخصص إختياري:</label>
-<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> <br>
-<label id="title" style="color: red;">متطلب تخصص إجباري:</label>
-<label><span id="classification_1">21</span> من <span>21</span> ساعة معتمدة</label> <br>
+        <div id="hours" style="display: flex; flex-direction: row; justify-content: center;" style="font-size: smaller;">
+            <div class="side">متطلبات الجامعة </div>
+            <div class="side">متطلبات تخصص</div>
+            
         </div>
 
 
