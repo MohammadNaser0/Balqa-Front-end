@@ -31,6 +31,15 @@
                 </tr>
             </tbody>
         </table>
-        <button onclick="history.back()">العودة</button>
+        <button onclick="goBack()">العودة</button>
+<script>
+function goBack() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "/"; // fallback page
+  }
+}
+</script>
 </body>
 </html>

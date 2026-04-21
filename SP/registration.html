@@ -16,6 +16,7 @@
             padding: 10px;
             border: #2e7d32 solid 2px;
             border-radius: 10px;
+            
         }
         span{
             font-size: large;
@@ -25,15 +26,19 @@
     </style>
 </head>
 <body>
+    <script type="Module"> 
+          import * as funcs from "./JS/registration.js";
+        Object.assign(window, funcs);
+        </script>
         <div id="hours" style="display: flex; flex-direction: row; justify-content: center;" style="font-size: smaller;">
-            <div class="side"><h2>متطلبات الجامعة </h2>
-                <span>إختياري: </span><span id="uni-opt">0/9</span>
-                <br><span> إجباري:</span><span id="uni-opt">0/21</span>
+            <div class="side" style="text-align: right;"><h2>متطلبات الجامعة </h2>
+                <span> إجباري:</span><span id="uni-opt">0/21</span>
+                <br><span>إختياري: </span><span id="uni-opt">0/9</span>
                 <br><span>كلية: </span><span id="uni-opt">0/32</span>
             </div>
-            <div class="side"><h2>متطلبات تخصص</h2>
-                <span >إختياري:</span><span id="major-Opt">   0/18</span> 
-                <br><span> إجباري:</span><span id="major-req">   0/64</span>
+            <div class="side" style="text-align: right;"><h2>متطلبات تخصص</h2>
+                <span> إجباري:</span><span id="major-req">   0/64</span> 
+                <br><span >إختياري:</span><span id="major-Opt">   0/18</span>
                 <br><span>مساندة: </span><span id="major-Sup">   0/9</span>
             </div>
         </div>
@@ -62,6 +67,15 @@
         <div id="cousres">
             <h5>المواد المقترحة</h5>
         </div>
-        <button onclick="history.back()">العودة</button>
+        <button onclick="goBack()">العودة</button>
+<script>
+function goBack() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "/"; // fallback page
+  }
+}
+</script>
 </body>
 </html>
