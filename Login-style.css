@@ -13,7 +13,7 @@ html ,body{
 #background{
     height: 100%;
     width: 100%;
-    background-image: url("src/darkLoginBackground.png");
+    background-image: url("assets/darkLoginBackground.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position: left;

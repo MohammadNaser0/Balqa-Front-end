@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" >
         <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v30/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5a1PiLA.woff2" as="fon/woff2" crossorigin="anonymous">
         <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v30/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5a1biLD-H.woff2" as="fon/woff2" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href=".\src\logo1.png">
+        <link rel="icon" type="image/x-icon" href=".\assets\logo1.png">
     </head>
     <body>|
         <script>
@@ -36,31 +36,30 @@
         Object.assign(window, funcs);
         </script>
         <aside id="drawer">
-            <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "src/logo1.png" alt="جامعة البقاء التطبيقية"></a>
+            <a href="http://www.bau.edu.jo/"><img id="logo" href="https://www.bau.edu.jo/" src = "assets/logo1.png" alt="جامعة البقاء التطبيقية"></a>
             <ul>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-home"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-home"></use></svg>
                     <a href="#home"> الصفحة الرئيسية</a></h4></li>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-bell"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-bell"></use></svg>
                     <a href="#announcement">الإعلانات</a></li></h4>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-grades"></use></svg> 
+                    <svg class="icon"><use href="assets/icons.svg#icon-grades"></use></svg> 
                     <a href="#grades">الإمتحانات</a></h4></li>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-reg"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-reg"></use></svg>
                     <a href="#registration">تسجيل المواد</a></h4></li>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-finance"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-finance"></use></svg>
                     <a href="#Finance">المالية</a></h4></li>
                 <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-services"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-services"></use></svg>
                     <a href="#services">خدمات الأكاديمية</a></h4></li>
-                    <li><h4><svg class="icon"><use href="src/icons.svg#icon-reg"></use></svg>
+                <li><h4><svg class="icon"><use href="assets/icons.svg#icon-reg"></use></svg>
                     <a href="https://forms.gle/gfXUTrLVhGupPxXP7">إستبيان</a></h4></li>
                 <li><h4>
-                <li><h4>
-                    <svg class="icon"><use href="src/icons.svg#icon-logout"></use></svg>
+                    <svg class="icon"><use href="assets/icons.svg#icon-logout"></use></svg>
                     <a href="index.html">تسجيل الخروج</a></h4></li>
             </ul>
         </aside>
@@ -87,7 +86,7 @@
                 <h2>تسجيل المواد</h2>
                     <hr>
                 <div><a href="SP/dates.html#schedule" class="btn-link">جدول المحاضرات</a><a href="SP/registration.html" class="btn-link">تسجيل المواد</a><a href="https://app2.bau.edu.jo:7799/courses/index.jsp?param=1" class="btn-link">حساب المعدل </a></div>
-                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="src/AdvisoryPlan-SE.pdf" class="btn-link">الخطة الإسترشادية</a><button onclick="delaySemester()">تأجيل الفصل</button></div>
+                <div><a href="https://app2.bau.edu.jo:7799/courses/index.jsp" class="btn-link">جريدة المواد</a><a href="assets/AdvisoryPlan-SE.pdf" class="btn-link">الخطة الإسترشادية</a><button onclick="delaySemester()">تأجيل الفصل</button></div>
             </section>
             <section id="Finance" style="display: none;">
                     <h2>المالية</h2> 
@@ -104,7 +103,7 @@
                 <h2>الإمتحانات</h2>
                 <hr>
                 <div><a href="SP/dates.html#examDate" class="btn-link">جدول الإمتحانات</a><a href="https://app1.bau.edu.jo:7777/obligation/login.jsp" class="btn-link">تقديم العذر</a><button onclick="markObjection()">أعتراض على مادة</button></div>
-                <div><a href="SP/dates.html#examScore" class="btn-link">علامات الفصل</a><a href="src/document.pdf" class="btn-link">كشف العلامات </a></div>
+                <div><a href="SP/dates.html#examScore" class="btn-link">علامات الفصل</a><a href="assets/document.pdf" class="btn-link">كشف العلامات </a></div>
                  </section>
             <section id="services" style="display: none;">
                 <h2>خدمات الأكاديمية</h2><hr>
@@ -123,12 +122,12 @@
                 <div>
                   <label>كلمة المرور البريد الإلكتروني:</label><br>
                   <input style="all: unset;" type="password" id="studentEmailPwd" name="pass-field" autocomplete="off" readonly>
-                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleEmailPwd()"><svg class="icon"><use href="src/icons.svg#icon-show"></use></svg></button>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleEmailPwd()"><svg class="icon"><use href="assets/icons.svg#icon-show"></use></svg></button>
                 </div>
                 <div>
                   <label>كلمة المرور التعليم الإلكتروني</label><br>
                   <input style="all: unset;" type="password" id="moodlePwd" name="pass-field" autocomplete="off" readonly>
-                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleMoodlePwd()"><svg class="icon"><use href="src/icons.svg#icon-show"></use></svg></button>
+                  <button style="all: unset; cursor: pointer;" type="button" id="pwd" onclick="toggleMoodlePwd()"><svg class="icon"><use href="assets/icons.svg#icon-show"></use></svg></button>
                 </div>
                 <div >
               <button class="close-btn">إغلاق</button>
