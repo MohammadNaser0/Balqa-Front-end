@@ -1,7 +1,16 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/cairo-v31-arabic_latin-700.woff2') format('woff2'),
+       url('../fonts/cairo-v31-arabic_latin-regular.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 html ,body{
     margin: 0;
     padding: 0;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'MyFont', sans-serif;
+    font-display: swap;
     direction: rtl;
     height: 100%;
     width: 100%;
