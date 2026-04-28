@@ -24,7 +24,7 @@ td ,tr ,th{
     font-size: 12px;
 }
 table{
-    font-family: 'Cairo', sans-serif;
+    font-family: inherit;
     table-layout: fixed;  
     text-align: center;
     border: #37a13c 2px solid;
@@ -43,7 +43,7 @@ tbody ,thead{
 button , a.btn-link {
     display: block;
     border-radius: 8px;
-    font-family: 'Cairo', sans-serif;
+    font-family: inherit;
     background-color: #2e7d32;
     color: #ffffff;
     border: none;
