@@ -52,7 +52,7 @@ a{
 }
 input{
     border-radius: 8px;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'MyFont';
     }   
 input[type="submit"]{
         background-color: #2e7d32;
