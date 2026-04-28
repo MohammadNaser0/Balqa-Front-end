@@ -110,6 +110,7 @@ dialog{
   width: fit-content;
   height: fit-content;
   font-family: inherit;
+  font-size:1em;
   text-align: center;
   border-radius: 10px;
 }
@@ -156,7 +157,7 @@ dialog::backdrop {
   }
    dialog{
           width: 85%;
-          height: 90%;
+          height: fit-content;
           border-radius: 5%;
         }
   dialog div :not(.close-btn){
