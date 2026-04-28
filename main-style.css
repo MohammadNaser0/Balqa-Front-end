@@ -108,6 +108,7 @@ button, a.btn-link {
 }
 dialog{
   width: fit-content;
+  min-width: 225px;
   height: fit-content;
   font-family: inherit;
   font-size:1em;
